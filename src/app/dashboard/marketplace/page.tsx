@@ -2,11 +2,8 @@ import React from 'react';
 import Sidebar from '@/components/dashboard/Sidebar';
 import Topbar from '@/components/dashboard/Topbar';
 
-const Marketplace = () => {
-    const tasks = [
-        { id: 'T-901', title: 'Edge Detection Tuning', reward: '$45.00', eta: '2h', complexity: 'High' },
-        { id: 'T-902', title: 'Dataset Cleaning (NLP)', reward: '$12.00', eta: '45m', complexity: 'Low' },
-    ];
+export default function MarketplacePage() {
+    const categories = ['All Tasks', 'Computer Vision', 'Linguistics', 'Medical'];
 
     return (
         <div className="dashboard-layout">
@@ -14,22 +11,30 @@ const Marketplace = () => {
             <div className="dashboard-main">
                 <Topbar />
                 <div className="dashboard-content">
-                    <header className="mb-8">
-                        <h1 className="text-4xl font-black text-gradient italic tracking-tighter uppercase">Task Marketplace</h1>
-                        <p className="text-slate-500">Acquire and deploy new logic batches</p>
+                    <header className="mb-8 flex justify-between items-end">
+                        <div>
+                            <h1 className="text-4xl font-black text-gradient italic tracking-tighter uppercase">Marketplace</h1>
+                            <p className="text-slate-500">Acquire new logic batches for deployment</p>
+                        </div>
+                        <div className="flex gap-2">
+                            {categories.map(cat => (
+                                <button key={cat} className="px-4 py-2 glass-panel text-xs font-bold hover:border-brand-primary transition-colors">{cat}</button>
+                            ))}
+                        </div>
                     </header>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {tasks.map((task) => (
-                            <div key={task.id} className="glass-panel p-6 border-l-4 border-l-brand-primary">
-                                <div className="flex justify-between items-start mb-4">
-                                    <span className="text-[10px] font-mono text-slate-500">{task.id}</span>
-                                    <span className="badge badge-purple">{task.complexity}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {[1, 2, 3, 4, 5, 6].map((i) => (
+                            <div key={i} className="glass-panel p-6 group hover:border-brand-primary/50 transition-all">
+                                <div className="flex justify-between mb-4">
+                                    <span className="text-[10px] font-mono text-brand-primary">BATCH #992-{i}</span>
+                                    <span className="badge badge-purple">High Yield</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-white mb-4">{task.title}</h3>
+                                <h3 className="text-lg font-bold text-white mb-2 italic">Neural Map Refinement</h3>
+                                <p className="text-xs text-slate-500 mb-6">Process complex spatial data for autonomous navigation units.</p>
                                 <div className="flex justify-between items-center pt-4 border-t border-white/5">
-                                    <span className="text-xl font-black text-brand-primary">{task.reward}</span>
-                                    <button className="btn-primary py-2 text-xs">Acquire</button>
+                                    <span className="text-xl font-black text-white">$45.50</span>
+                                    <button className="btn-primary py-2 px-4 text-xs">Acquire Task</button>
                                 </div>
                             </div>
                         ))}
@@ -38,6 +43,4 @@ const Marketplace = () => {
             </div>
         </div>
     );
-};
-
-export default Marketplace;
+}
