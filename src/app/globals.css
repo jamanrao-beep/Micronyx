@@ -602,3 +602,9 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.system-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--glow-industrial);
+}

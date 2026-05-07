@@ -15,6 +15,8 @@ const navItems = [
     { label: 'Monitor', href: '/dashboard/monitor', icon: '📈' },
     { label: 'Identity', href: '/dashboard/identity', icon: '🆔' },
     { label: 'Support', href: '/dashboard/support', icon: '🎧' },
+    { label: 'Hardware', href: '/dashboard/hardware', icon: '🛠️' },
+    { label: 'Schematics', href: '/dashboard/schematics', icon: '📐' },
 ]
 
 export default function Sidebar() {
