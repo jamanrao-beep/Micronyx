@@ -14,6 +14,8 @@
   --color-brand-accent: #8b5cf6;
   --color-glass-bg: rgba(255, 255, 255, 0.03);
   --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-system-flow: #3b82f6;
+  --glow-industrial: 0 0 15px rgba(56, 189, 248, 0.3);
 
   --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

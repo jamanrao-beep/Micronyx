@@ -2,6 +2,7 @@ import React from 'react';
 import PremiumStats from '@/components/dashboard/PremiumStats';
 import Sidebar from '@/components/dashboard/Sidebar'
 import Topbar from '@/components/dashboard/Topbar'
+import Link from 'next/link';
 
 const activeTasks = [
     {
@@ -415,7 +416,9 @@ export default function ContributorDashboard() {
                                     </div>
 
                                     {/* Action */}
-                                    <button className="resume-btn">Resume</button>
+                                    <Link href="/dashboard/projects">
+                                        <button className="resume-btn">Resume</button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

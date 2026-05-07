@@ -2,13 +2,19 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { LayoutDashboard, Users, Settings, Briefcase, Zap } from 'lucide-react';
 
 const navItems = [
     { label: 'Dashboard', href: '/dashboard', icon: '⊞' },
+    { label: 'Agents', href: '/dashboard/agents', icon: '⚡' },
+    { label: 'Clients', href: '/dashboard/clients', icon: '👥' },
+    { label: 'Projects', href: '/dashboard/projects', icon: '📂' },
     { label: 'Marketplace', href: '/dashboard/tasks', icon: '🛒' },
     { label: 'Earnings', href: '/dashboard/earnings', icon: '💳' },
     { label: 'Disputes', href: '/dashboard/disputes', icon: '⚖' },
     { label: 'Monitor', href: '/dashboard/monitor', icon: '📈' },
+    { label: 'Identity', href: '/dashboard/identity', icon: '🆔' },
+    { label: 'Support', href: '/dashboard/support', icon: '🎧' },
 ]
 
 export default function Sidebar() {
