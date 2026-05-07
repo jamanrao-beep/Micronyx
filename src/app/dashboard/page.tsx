@@ -1,3 +1,5 @@
+import React from 'react';
+import PremiumStats from '@/components/dashboard/PremiumStats';
 import Sidebar from '@/components/dashboard/Sidebar'
 import Topbar from '@/components/dashboard/Topbar'
 
@@ -50,21 +52,26 @@ export default function ContributorDashboard() {
                     {/* ── Welcome Header ── */}
                     <div style={{ marginBottom: '32px' }}>
                         <h1
+                            className="text-gradient"
                             style={{
-                                fontSize: '26px',
-                                fontWeight: 700,
-                                color: '#F1F5F9',
-                                letterSpacing: '-0.02em',
+                                fontSize: '32px',
+                                fontWeight: 900,
+                                letterSpacing: '-0.04em',
                                 marginBottom: '6px',
+                                textTransform: 'uppercase',
+                                fontStyle: 'italic'
                             }}
                         >
-                            Welcome back, Alex
+                            Operations Center
                         </h1>
                         <p style={{ fontSize: '14px', color: '#64748B' }}>
-                            Your performance score increased by{' '}
-                            <span style={{ color: '#22C55E', fontWeight: 600 }}>12%</span> this week. Keep it up!
+                            Welcome back, Alex. Performance score increased by{' '}
+                            <span style={{ color: '#22C55E', fontWeight: 600 }}>12%</span>.
                         </p>
                     </div>
+
+                    {/* NEW: Premium Stats Layer (Additive) */}
+                    <PremiumStats />
 
                     {/* ── Top Row: Rank + Efficiency ── */}
                     <div
@@ -76,7 +83,7 @@ export default function ContributorDashboard() {
                         }}
                     >
                         {/* Rank Card */}
-                        <div className="stat-card">
+                        <div className="stat-card glass-panel">
                             <p
                                 style={{
                                     fontSize: '10px',
@@ -144,7 +151,7 @@ export default function ContributorDashboard() {
                         </div>
 
                         {/* Efficiency Tracking Card */}
-                        <div className="stat-card">
+                        <div className="stat-card glass-panel">
                             <div
                                 style={{
                                     display: 'flex',
@@ -219,7 +226,7 @@ export default function ContributorDashboard() {
                         }}
                     >
                         {/* Total Earnings */}
-                        <div className="stat-card">
+                        <div className="stat-card glass-panel">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                                 <span style={{ fontSize: '18px' }}>💳</span>
                                 <span style={{ fontSize: '13px', color: '#64748B' }}>Total Earnings</span>
@@ -239,7 +246,7 @@ export default function ContributorDashboard() {
                         </div>
 
                         {/* Pending Approval */}
-                        <div className="stat-card">
+                        <div className="stat-card glass-panel">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                                 <span style={{ fontSize: '18px' }}>⏳</span>
                                 <span style={{ fontSize: '13px', color: '#64748B' }}>Pending Approval</span>
@@ -259,7 +266,7 @@ export default function ContributorDashboard() {
                         </div>
 
                         {/* Next Payout */}
-                        <div className="stat-card">
+                        <div className="stat-card glass-panel">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                                 <span style={{ fontSize: '18px' }}>🏦</span>
                                 <span style={{ fontSize: '13px', color: '#64748B' }}>Next Payout</span>
@@ -280,7 +287,7 @@ export default function ContributorDashboard() {
                     </div>
 
                     {/* ── Active Tasks Table ── */}
-                    <div className="stat-card" style={{ padding: '0' }}>
+                    <div className="stat-card glass-panel" style={{ padding: '0' }}>
                         {/* Table header */}
                         <div
                             style={{
