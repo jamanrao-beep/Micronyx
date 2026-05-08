@@ -409,6 +409,12 @@ body {
   overflow-y: auto;
 }
 
+.dashboard-main {
+  margin-left: 220px;
+  flex: 1;
+  min-height: 100vh;
+}
+
 .sidebar-logo {
   padding: 0 20px 24px;
   border-bottom: 1px solid #1E2535;

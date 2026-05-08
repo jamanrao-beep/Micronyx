@@ -40,10 +40,10 @@ const activeTasks = [
 
 export default function ContributorDashboard() {
     return (
-        <div className="dashboard-content">
-
+        <>
             {/* ── Welcome Header ── */}
-            <div style={{ marginBottom: '32px' }}>
+            < div style={{ marginBottom: '32px' }
+            }>
                 <h1
                     className="text-gradient"
                     style={{
@@ -61,13 +61,13 @@ export default function ContributorDashboard() {
                     Welcome back, Alex. Performance score increased by{' '}
                     <span style={{ color: '#22C55E', fontWeight: 600 }}>12%</span>.
                 </p>
-            </div>
+            </div >
 
             {/* NEW: Premium Stats Layer (Additive) */}
-            <PremiumStats />
+            < PremiumStats />
 
             {/* ── Top Row: Rank + Efficiency ── */}
-            <div
+            < div
                 style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1.6fr',
@@ -76,7 +76,7 @@ export default function ContributorDashboard() {
                 }}
             >
                 {/* Rank Card */}
-                <div className="stat-card glass-panel">
+                < div className="stat-card glass-panel" >
                     <p
                         style={{
                             fontSize: '10px',
@@ -141,10 +141,10 @@ export default function ContributorDashboard() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div >
 
                 {/* Efficiency Tracking Card */}
-                <div className="stat-card glass-panel">
+                < div className="stat-card glass-panel" >
                     <div
                         style={{
                             display: 'flex',
@@ -206,11 +206,11 @@ export default function ContributorDashboard() {
                         <span style={{ fontSize: '11px', color: '#334155' }}>DAY 15</span>
                         <span style={{ fontSize: '11px', color: '#334155' }}>TODAY</span>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
 
             {/* ── Earnings Row ── */}
-            <div
+            < div
                 style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr',
@@ -219,7 +219,7 @@ export default function ContributorDashboard() {
                 }}
             >
                 {/* Total Earnings */}
-                <div className="stat-card glass-panel">
+                < div className="stat-card glass-panel" >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                         <span style={{ fontSize: '18px' }}>💳</span>
                         <span style={{ fontSize: '13px', color: '#64748B' }}>Total Earnings</span>
@@ -236,10 +236,10 @@ export default function ContributorDashboard() {
                         $2,480.00
                     </p>
                     <p style={{ fontSize: '12px', color: '#22C55E' }}>↑ +15% from last month</p>
-                </div>
+                </div >
 
                 {/* Pending Approval */}
-                <div className="stat-card glass-panel">
+                < div className="stat-card glass-panel" >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                         <span style={{ fontSize: '18px' }}>⏳</span>
                         <span style={{ fontSize: '13px', color: '#64748B' }}>Pending Approval</span>
@@ -256,10 +256,10 @@ export default function ContributorDashboard() {
                         $412.50
                     </p>
                     <p style={{ fontSize: '12px', color: '#64748B' }}>⏱ 8 tasks in review</p>
-                </div>
+                </div >
 
                 {/* Next Payout */}
-                <div className="stat-card glass-panel">
+                < div className="stat-card glass-panel" >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                         <span style={{ fontSize: '18px' }}>🏦</span>
                         <span style={{ fontSize: '13px', color: '#64748B' }}>Next Payout</span>
@@ -276,13 +276,13 @@ export default function ContributorDashboard() {
                         Aug 24
                     </p>
                     <p style={{ fontSize: '12px', color: '#64748B' }}>📅 Scheduled via ACH</p>
-                </div>
-            </div>
+                </div >
+            </div >
 
             {/* ── Active Tasks Table ── */}
-            <div className="stat-card glass-panel" style={{ padding: '0' }}>
+            < div className="stat-card glass-panel" style={{ padding: '0' }}>
                 {/* Table header */}
-                <div
+                < div
                     style={{
                         padding: '20px 24px',
                         borderBottom: '1px solid #1E2535',
@@ -305,117 +305,120 @@ export default function ContributorDashboard() {
                     >
                         View All Tasks →
                     </a>
-                </div>
+                </div >
 
                 {/* Column headers */}
-                <div
+                < div
                     className="task-row"
                     style={{
                         padding: '12px 24px',
                         borderBottom: '1px solid #1E2535',
                     }}
                 >
-                    {['TASK NAME', 'TYPE', 'TIME LEFT', 'REWARD', 'CONFIDENCE', 'ACTION'].map((col) => (
-                        <span
-                            key={col}
-                            style={{
-                                fontSize: '10px',
-                                letterSpacing: '0.1em',
-                                color: '#334155',
-                                textTransform: 'uppercase',
-                                fontWeight: 600,
-                            }}
-                        >
-                            {col}
-                        </span>
-                    ))}
-                </div>
+                    {
+                        ['TASK NAME', 'TYPE', 'TIME LEFT', 'REWARD', 'CONFIDENCE', 'ACTION'].map((col) => (
+                            <span
+                                key={col}
+                                style={{
+                                    fontSize: '10px',
+                                    letterSpacing: '0.1em',
+                                    color: '#334155',
+                                    textTransform: 'uppercase',
+                                    fontWeight: 600,
+                                }}
+                            >
+                                {col}
+                            </span>
+                        ))
+                    }
+                </div >
 
                 {/* Task rows */}
-                <div style={{ padding: '0 24px' }}>
-                    {activeTasks.map((task) => (
-                        <div key={task.id} className="task-row">
-                            {/* Task Name */}
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <div
+                < div style={{ padding: '0 24px' }}>
+                    {
+                        activeTasks.map((task) => (
+                            <div key={task.id} className="task-row">
+                                {/* Task Name */}
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div
+                                        style={{
+                                            width: '32px',
+                                            height: '32px',
+                                            borderRadius: '8px',
+                                            background: task.urgent
+                                                ? 'rgba(239,68,68,0.1)'
+                                                : 'rgba(108,99,255,0.1)',
+                                            border: `1px solid ${task.urgent ? 'rgba(239,68,68,0.2)' : 'rgba(108,99,255,0.2)'}`,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            fontSize: '14px',
+                                            flexShrink: 0,
+                                        }}
+                                    >
+                                        {task.urgent ? '❗' : '📊'}
+                                    </div>
+                                    <div>
+                                        <p style={{ fontSize: '13px', fontWeight: 600, color: '#F1F5F9', marginBottom: '2px' }}>
+                                            {task.name}
+                                        </p>
+                                        <p style={{ fontSize: '11px', color: '#334155' }}>{task.batch}</p>
+                                    </div>
+                                </div>
+
+                                {/* Type */}
+                                <span className={`badge ${task.typeColor}`}>{task.type}</span>
+
+                                {/* Time Left */}
+                                <span
                                     style={{
-                                        width: '32px',
-                                        height: '32px',
-                                        borderRadius: '8px',
-                                        background: task.urgent
-                                            ? 'rgba(239,68,68,0.1)'
-                                            : 'rgba(108,99,255,0.1)',
-                                        border: `1px solid ${task.urgent ? 'rgba(239,68,68,0.2)' : 'rgba(108,99,255,0.2)'}`,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '14px',
-                                        flexShrink: 0,
+                                        fontSize: '13px',
+                                        fontWeight: 600,
+                                        color: task.urgent ? '#EF4444' : '#94A3B8',
+                                        fontVariantNumeric: 'tabular-nums',
                                     }}
                                 >
-                                    {task.urgent ? '❗' : '📊'}
-                                </div>
-                                <div>
-                                    <p style={{ fontSize: '13px', fontWeight: 600, color: '#F1F5F9', marginBottom: '2px' }}>
-                                        {task.name}
-                                    </p>
-                                    <p style={{ fontSize: '11px', color: '#334155' }}>{task.batch}</p>
-                                </div>
-                            </div>
-
-                            {/* Type */}
-                            <span className={`badge ${task.typeColor}`}>{task.type}</span>
-
-                            {/* Time Left */}
-                            <span
-                                style={{
-                                    fontSize: '13px',
-                                    fontWeight: 600,
-                                    color: task.urgent ? '#EF4444' : '#94A3B8',
-                                    fontVariantNumeric: 'tabular-nums',
-                                }}
-                            >
-                                {task.timeLeft}
-                            </span>
-
-                            {/* Reward */}
-                            <span
-                                style={{
-                                    fontSize: '14px',
-                                    fontWeight: 700,
-                                    color: '#F1F5F9',
-                                }}
-                            >
-                                {task.reward}
-                            </span>
-
-                            {/* Confidence */}
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <span
-                                    className="glow-dot"
-                                    style={{
-                                        background: task.confidence === 100
-                                            ? '#22C55E'
-                                            : task.confidence >= 95
-                                                ? 'var(--accent)'
-                                                : 'var(--primary)',
-                                        animation: 'none',
-                                    }}
-                                />
-                                <span style={{ fontSize: '13px', color: '#94A3B8' }}>
-                                    {task.confidence}%
+                                    {task.timeLeft}
                                 </span>
+
+                                {/* Reward */}
+                                <span
+                                    style={{
+                                        fontSize: '14px',
+                                        fontWeight: 700,
+                                        color: '#F1F5F9',
+                                    }}
+                                >
+                                    {task.reward}
+                                </span>
+
+                                {/* Confidence */}
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span
+                                        className="glow-dot"
+                                        style={{
+                                            background: task.confidence === 100
+                                                ? '#22C55E'
+                                                : task.confidence >= 95
+                                                    ? 'var(--accent)'
+                                                    : 'var(--primary)',
+                                            animation: 'none',
+                                        }}
+                                    />
+                                    <span style={{ fontSize: '13px', color: '#94A3B8' }}>
+                                        {task.confidence}%
+                                    </span>
+                                </div>
+
+                                {/* Action */}
+                                <Link href="/dashboard/projects">
+                                    <button className="resume-btn">Resume</button>
+                                </Link>
                             </div>
-
-                            {/* Action */}
-                            <Link href="/dashboard/projects">
-                                <button className="resume-btn">Resume</button>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-        </div>
+                        ))
+                    }
+                </div >
+            </div >
+        </>
     )
 }
