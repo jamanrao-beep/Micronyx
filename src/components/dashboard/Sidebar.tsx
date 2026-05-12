@@ -9,7 +9,7 @@ const navItems = [
     { label: 'Agents', href: '/dashboard/agents', icon: '⚡' },
     { label: 'Clients', href: '/dashboard/clients', icon: '👥' },
     { label: 'Projects', href: '/dashboard/projects', icon: '📂' },
-    { label: 'Marketplace', href: '/dashboard/tasks', icon: '🛒' },
+    { label: 'Marketplace', href: '/dashboard/marketplace', icon: '🛒' },
     { label: 'Earnings', href: '/dashboard/earnings', icon: '💳' },
     { label: 'Disputes', href: '/dashboard/disputes', icon: '⚖' },
     { label: 'Monitor', href: '/dashboard/monitor', icon: '📈' },
